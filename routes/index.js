@@ -8,7 +8,6 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use('/',router);
 app.use('/tt/assets',express.static(path.join(__dirname, '../tt/views/assets')));
-//console.log(path.join(__dirname, '../views/assets'));
 
 routes.get('/', (req, res) => {
     res.sendFile(pathViews + 'index.html');
