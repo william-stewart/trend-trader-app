@@ -1,13 +1,14 @@
 const routes = require('express').Router();
 var path = require('path');
-var pathViews = path.join(__dirname, '../views/')
+var pathViews = path.join(__dirname, '../tt/views/');
 var express = require("express");
 var app = express();
 var router = express.Router();
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use('/',router);
-app.use('/assets',express.static(path.join(__dirname, '../views/assets')));
+app.use('/tt/assets',express.static(path.join(__dirname, '../tt/views/assets')));
+//console.log(path.join(__dirname, '../views/assets'));
 
 routes.get('/', (req, res) => {
     res.sendFile(pathViews + 'index.html');
