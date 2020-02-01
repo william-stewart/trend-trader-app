@@ -7,7 +7,6 @@ const bodyParser = require("body-parser");
 const mysql = require('mysql');
 var path = __dirname + 'tt/views/';
 app.use('/tt/assets',express.static(path + '/assets'));
-console.log(path);
 
 const appPort = 8085;
 const appPrefix = '/tt';

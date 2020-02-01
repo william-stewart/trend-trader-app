@@ -7,7 +7,7 @@ var router = express.Router();
 const bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use('/',router);
-app.use('/tt/assets',express.static(path.join(__dirname, '../tt/views/assets')));
+//app.use('/tt/assets',express.static(path.join(__dirname, '../tt/views/assets')));
 
 routes.get('/', (req, res) => {
     res.sendFile(pathViews + 'index.html');
