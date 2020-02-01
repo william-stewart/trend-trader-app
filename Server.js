@@ -5,7 +5,7 @@ var routes = require('./routes');
 const fetch = require('node-fetch');
 const bodyParser = require("body-parser");
 const mysql = require('mysql');
-var path = __dirname + '/tt/views/';
+var path = __dirname + 'tt/views/';
 app.use('/tt/assets',express.static(path + '/assets'));
 console.log(path);
 
